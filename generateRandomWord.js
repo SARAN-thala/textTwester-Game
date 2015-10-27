@@ -64,7 +64,7 @@ var generateRandomWord = function () {
 	document.getElementById('init').innerHTML = generateRandomSequence(getWord);
 };
 
-function doOperationOnCheck (a) {
+var doOperationOnCheck = function(a) {
 	if (a==currentWord) {
 		countScore+=10;
 		document.getElementById('demo').innerHTML = countScore;
@@ -74,7 +74,7 @@ function doOperationOnCheck (a) {
 		alert(currentWord+" your score is "+countScore);
 }
 
-function checkOutput () {
+var checkOutput = function() {
 	var obtainedText = document.getElementById('text').value;
 	doOperationOnCheck(obtainedText); 
 };
